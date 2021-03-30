@@ -13,9 +13,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test-junit5"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
+    testImplementation("io.kotest:kotest-runner-junit5:4.4.3")
 }
 
 tasks.test {
@@ -23,9 +21,13 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = "15"
+    kotlinOptions {
+        jvmTarget = "15"
+        @Suppress("SuspiciousCollectionReassignment")
+        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
+    }
 }
 
 application {
-    mainClassName = "MainKt"
+    mainClass.set("jvmusin.customaggregations.MainKt")
 }
