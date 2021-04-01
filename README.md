@@ -1,7 +1,6 @@
 # Contents Prepender
 
 [![Gradle CI](https://github.com/jvmusin/contents-prepender/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jvmusin/contents-prepender/actions/workflows/gradle-build.yml)
-[![Google Java Format](https://github.com/jvmusin/contents-prepender/actions/workflows/google-java-format.yml/badge.svg)](https://github.com/jvmusin/contents-prepender/actions/workflows/google-java-format.yml)
 
 ## Возможности
 
