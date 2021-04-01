@@ -1,11 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.5.0-M2"
-    application
+    kotlin("jvm") version "1.4.32"
+    java
+    id("io.freefair.lombok") version "5.3.0"
 }
 
-group = "com.github.jvmusin"
+group = "jvmusin"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -26,8 +27,4 @@ tasks.withType<KotlinCompile>() {
         @Suppress("SuspiciousCollectionReassignment")
         freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
     }
-}
-
-application {
-    mainClass.set("jvmusin.customaggregations.MainKt")
 }

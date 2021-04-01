@@ -5,19 +5,19 @@ import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.shouldBe
 
 class ContentsRendererTests : BehaviorSpec() {
-    private val contentsRenderer = ContentsRenderer()
+    private val contentsRenderer = ContentsRenderer(4)
 
     init {
         Given("render") {
             When("contents is empty") {
                 Then("returns empty list") {
-                    contentsRenderer.render(emptyList()).shouldBeEmpty()
+                    contentsRenderer.render(Contents()).shouldBeEmpty()
                 }
             }
             When("contents consist only of first-level headers") {
                 Then("renders them") {
                     contentsRenderer.render(
-                        listOf(
+                        Contents(
                             Header(1, "First"),
                             Header(1, "Second"),
                             Header(1, "Third"),
@@ -32,7 +32,7 @@ class ContentsRendererTests : BehaviorSpec() {
             When("contents consist of deep headers") {
                 Then("renders them") {
                     contentsRenderer.render(
-                        listOf(
+                        Contents(
                             Header(1, "First"),
                             Header(2, "First sub 1"),
                             Header(3, "First sub sub"),
@@ -58,7 +58,7 @@ class ContentsRendererTests : BehaviorSpec() {
             }
             When("headers have multiple spaces") {
                 Then("they all are replaces with - in links") {
-                    contentsRenderer.render(listOf(Header(1, "This is   the spaced  header")))
+                    contentsRenderer.render(Contents(Header(1, "This is   the spaced  header")))
                         .shouldBe(listOf("1. [This is   the spaced  header](#this-is---the-spaced--header)"))
                 }
             }

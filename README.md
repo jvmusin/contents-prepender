@@ -1,6 +1,7 @@
 # Кастомные агрегации на таблицах
 
-[![Kotlin CI with Gradle](https://github.com/jvmusin/custom-aggregations/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jvmusin/custom-aggregations/actions/workflows/gradle-build.yml)
+[![Gradle CI](https://github.com/jvmusin/custom-aggregations/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jvmusin/custom-aggregations/actions/workflows/gradle-build.yml)
+[![Google Java Format](https://github.com/jvmusin/custom-aggregations/actions/workflows/google-java-format.yml/badge.svg)](https://github.com/jvmusin/custom-aggregations/actions/workflows/google-java-format.yml)
 
 ## Возможности
 
@@ -106,10 +107,10 @@ content
 
 Реализован в [ContentsPrepender].
 
-[ContentsExtractor]: src/main/kotlin/jvmusin/customaggregations/ContentsExtractor.kt
+[ContentsExtractor]: src/main/java/jvmusin/customaggregations/ContentsExtractor.java
 
-[ContentsValidator]: src/main/kotlin/jvmusin/customaggregations/ContentsValidator.kt
+[ContentsValidator]: src/main/java/jvmusin/customaggregations/ContentsValidator.java
 
-[ContentsRenderer]: src/main/kotlin/jvmusin/customaggregations/ContentsRenderer.kt
+[ContentsRenderer]: src/main/java/jvmusin/customaggregations/ContentsRenderer.java
 
-[ContentsPrepender]: src/main/kotlin/jvmusin/customaggregations/ContentsPrepender.kt
+[ContentsPrepender]: src/main/java/jvmusin/customaggregations/ContentsPrepender.java

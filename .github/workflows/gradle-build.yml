@@ -1,8 +1,7 @@
-name: Kotlin CI with Gradle
+name: Gradle CI
 
 on:
   push:
-  pull_request:
 
 jobs:
   build:

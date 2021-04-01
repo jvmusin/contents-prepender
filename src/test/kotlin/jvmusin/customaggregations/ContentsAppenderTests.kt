@@ -6,7 +6,7 @@ import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeEmpty
 
 class ContentsAppenderTests : BehaviorSpec() {
-    private val contentsAppender = ContentsPrepender()
+    private val contentsAppender = ContentsPrepender(ContentsExtractor(), ContentsRenderer(4), ContentsValidator())
 
     init {
         Given("prependWithContents") {
