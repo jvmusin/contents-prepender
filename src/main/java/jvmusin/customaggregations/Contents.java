@@ -9,15 +9,14 @@ import java.util.Collection;
 /**
  * Table of contents.
  *
- * <p> Represented as a list of {@link Header}-s.
+ * <p>Represented as a list of {@link Header}-s.
  */
 public class Contents extends ArrayList<Header> {
     public Contents(int initialCapacity) {
         super(initialCapacity);
     }
 
-    public Contents() {
-    }
+    public Contents() {}
 
     public Contents(@NotNull Collection<? extends Header> c) {
         super(c);
