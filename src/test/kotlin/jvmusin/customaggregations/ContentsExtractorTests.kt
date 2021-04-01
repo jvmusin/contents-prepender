@@ -21,12 +21,12 @@ class ContentsExtractorTests : BehaviorSpec() {
             }
             When("text has a single header of level 1") {
                 Then("it's extracted correctly") {
-                    extractor.extract(listOf("# The Header")) shouldBe listOf(Header(1, "The Header"))
+                    extractor.extract(listOf("# The Header")) shouldBe Contents(Header(1, "The Header"))
                 }
             }
             When("text has several headers") {
                 Then("they're extracted correctly") {
-                    extractor.extract(listOf("# H1", "## H2", "## H2_2", "# H1_2")) shouldBe listOf(
+                    extractor.extract(listOf("# H1", "## H2", "## H2_2", "# H1_2")) shouldBe Contents(
                         Header(1, "H1"),
                         Header(2, "H2"),
                         Header(2, "H2_2"),
@@ -36,17 +36,17 @@ class ContentsExtractorTests : BehaviorSpec() {
             }
             When("headers have several spaces") {
                 Then("the ones in the middle are not removed, but the line is trimmed") {
-                    extractor.extract(listOf("#   Hello   it's me  ")) shouldBe listOf(Header(1, "Hello   it's me"))
+                    extractor.extract(listOf("#   Hello   it's me  ")) shouldBe Contents(Header(1, "Hello   it's me"))
                 }
             }
             When("header has no space after hash symbol") {
                 Then("it's extracted correctly") {
-                    extractor.extract(listOf("#Header")) shouldBe listOf(Header(1, "Header"))
+                    extractor.extract(listOf("#Header")) shouldBe Contents(Header(1, "Header"))
                 }
             }
             When("line has spaces before leading hashes") {
                 Then("it's extracted correctly") {
-                    extractor.extract(listOf("  # Hi")) shouldBe listOf(Header(1, "Hi"))
+                    extractor.extract(listOf("  # Hi")) shouldBe Contents(Header(1, "Hi"))
                 }
             }
             When("line contains only hashes") {

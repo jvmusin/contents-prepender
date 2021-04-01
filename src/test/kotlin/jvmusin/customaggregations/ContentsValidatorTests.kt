@@ -10,26 +10,26 @@ class ContentsValidatorTests : BehaviorSpec() {
         Given("validate") {
             When("contents is empty") {
                 Then("validation passes") {
-                    contentsValidator.validate(emptyList())
+                    contentsValidator.validate(Contents())
                 }
             }
             When("contents has one header") {
                 And("the header has level 1") {
                     Then("validation passes") {
-                        contentsValidator.validate(listOf(Header(1, "Header")))
+                        contentsValidator.validate(Contents(Header(1, "Header")))
                     }
                 }
                 And("the header has level 2") {
                     Then("validation fails") {
                         shouldThrow<ContentsInvalidException> {
-                            contentsValidator.validate(listOf(Header(2, "Header")))
+                            contentsValidator.validate(Contents(Header(2, "Header")))
                         }
                     }
                 }
                 And("the header has level 0") {
                     Then("validation fails") {
                         shouldThrow<ContentsInvalidException> {
-                            contentsValidator.validate(listOf(Header(0, "Header")))
+                            contentsValidator.validate(Contents(Header(0, "Header")))
                         }
                     }
                 }
@@ -38,7 +38,7 @@ class ContentsValidatorTests : BehaviorSpec() {
                 And("everything is all right") {
                     Then("validation passes") {
                         contentsValidator.validate(
-                            listOf(
+                            Contents(
                                 Header(1, "The Root"),
                                 Header(2, "First section"),
                                 Header(3, "First subsection 1"),
@@ -54,7 +54,7 @@ class ContentsValidatorTests : BehaviorSpec() {
                     Then("validation fails") {
                         shouldThrow<ContentsInvalidException> {
                             contentsValidator.validate(
-                                listOf(
+                                Contents(
                                     Header(1, "Header1"),
                                     Header(3, "Header2")
                                 )
@@ -67,7 +67,7 @@ class ContentsValidatorTests : BehaviorSpec() {
                 Then("validation fails") {
                     shouldThrow<ContentsInvalidException> {
                         contentsValidator.validate(
-                            listOf(
+                            Contents(
                                 Header(1, "Header1"),
                                 Header(2, "Header2"),
                                 Header(0, "Header0")
