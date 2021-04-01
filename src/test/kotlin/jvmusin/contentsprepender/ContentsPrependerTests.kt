@@ -1,18 +1,18 @@
-package jvmusin.customaggregations
+package jvmusin.contentsprepender
 
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeEmpty
 
-class ContentsAppenderTests : BehaviorSpec() {
-    private val contentsAppender = ContentsPrepender(ContentsExtractor(), ContentsRenderer(4), ContentsValidator())
+class ContentsPrependerTests : BehaviorSpec() {
+    private val prepender = ContentsPrepender(ContentsExtractor(), ContentsRenderer(4), ContentsValidator())
 
     init {
         Given("prependWithContents") {
             When("text is empty") {
                 Then("returns empty text") {
-                    contentsAppender.prependWithContents("").shouldBeEmpty()
+                    prepender.prependWithContents("").shouldBeEmpty()
                 }
             }
             When("text does not have headers") {
@@ -21,7 +21,7 @@ class ContentsAppenderTests : BehaviorSpec() {
                         when we all fall asleep,
                         where do we go?
                     """.trimIndent()
-                    contentsAppender.prependWithContents(text) shouldBe text
+                    prepender.prependWithContents(text) shouldBe text
                 }
             }
             When("text has only headers") {
@@ -46,7 +46,7 @@ class ContentsAppenderTests : BehaviorSpec() {
                     ### Step 1
                     ### Step 2
                 """.trimIndent()
-                    contentsAppender.prependWithContents(text) shouldBe expect
+                    prepender.prependWithContents(text) shouldBe expect
                 }
             }
             When("test has headers and regular lines") {
@@ -77,7 +77,7 @@ class ContentsAppenderTests : BehaviorSpec() {
                     ### Step 2
                     content
                 """.trimIndent()
-                    contentsAppender.prependWithContents(text) shouldBe expect
+                    prepender.prependWithContents(text) shouldBe expect
                 }
             }
             When("text has indentation level jumps by more than 1") {
@@ -87,7 +87,7 @@ class ContentsAppenderTests : BehaviorSpec() {
                         ### And the jump
                     """.trimIndent()
                     shouldThrow<ContentsInvalidException> {
-                        contentsAppender.prependWithContents(text)
+                        prepender.prependWithContents(text)
                     }
                 }
             }

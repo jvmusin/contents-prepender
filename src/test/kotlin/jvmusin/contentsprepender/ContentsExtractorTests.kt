@@ -1,4 +1,4 @@
-package jvmusin.customaggregations
+package jvmusin.contentsprepender
 
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.collections.shouldBeEmpty

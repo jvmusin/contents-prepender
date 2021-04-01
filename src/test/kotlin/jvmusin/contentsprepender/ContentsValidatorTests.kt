@@ -1,35 +1,35 @@
-package jvmusin.customaggregations
+package jvmusin.contentsprepender
 
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.BehaviorSpec
 
 class ContentsValidatorTests : BehaviorSpec() {
-    private val contentsValidator = ContentsValidator()
+    private val validator = ContentsValidator()
 
     init {
         Given("validate") {
             When("contents is empty") {
                 Then("validation passes") {
-                    contentsValidator.validate(Contents())
+                    validator.validate(Contents())
                 }
             }
             When("contents has one header") {
                 And("the header has level 1") {
                     Then("validation passes") {
-                        contentsValidator.validate(Contents(Header(1, "Header")))
+                        validator.validate(Contents(Header(1, "Header")))
                     }
                 }
                 And("the header has level 2") {
                     Then("validation fails") {
                         shouldThrow<ContentsInvalidException> {
-                            contentsValidator.validate(Contents(Header(2, "Header")))
+                            validator.validate(Contents(Header(2, "Header")))
                         }
                     }
                 }
                 And("the header has level 0") {
                     Then("validation fails") {
                         shouldThrow<ContentsInvalidException> {
-                            contentsValidator.validate(Contents(Header(0, "Header")))
+                            validator.validate(Contents(Header(0, "Header")))
                         }
                     }
                 }
@@ -37,7 +37,7 @@ class ContentsValidatorTests : BehaviorSpec() {
             When("contents has several headers") {
                 And("everything is all right") {
                     Then("validation passes") {
-                        contentsValidator.validate(
+                        validator.validate(
                             Contents(
                                 Header(1, "The Root"),
                                 Header(2, "First section"),
@@ -53,7 +53,7 @@ class ContentsValidatorTests : BehaviorSpec() {
                 And("There is an indentation level jump of more than 1") {
                     Then("validation fails") {
                         shouldThrow<ContentsInvalidException> {
-                            contentsValidator.validate(
+                            validator.validate(
                                 Contents(
                                     Header(1, "Header1"),
                                     Header(3, "Header2")
@@ -66,7 +66,7 @@ class ContentsValidatorTests : BehaviorSpec() {
             When("Some of the headers has indentation level 0") {
                 Then("validation fails") {
                     shouldThrow<ContentsInvalidException> {
-                        contentsValidator.validate(
+                        validator.validate(
                             Contents(
                                 Header(1, "Header1"),
                                 Header(2, "Header2"),

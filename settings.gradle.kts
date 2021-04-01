@@ -1,1 +1,1 @@
-rootProject.name = "custom-aggregations"
+rootProject.name = "contents-prepender"

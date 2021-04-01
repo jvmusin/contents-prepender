@@ -1,7 +1,7 @@
-# Кастомные агрегации на таблицах
+# Contents Prepender
 
-[![Gradle CI](https://github.com/jvmusin/custom-aggregations/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jvmusin/custom-aggregations/actions/workflows/gradle-build.yml)
-[![Google Java Format](https://github.com/jvmusin/custom-aggregations/actions/workflows/google-java-format.yml/badge.svg)](https://github.com/jvmusin/custom-aggregations/actions/workflows/google-java-format.yml)
+[![Gradle CI](https://github.com/jvmusin/contents-prepender/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jvmusin/contents-prepender/actions/workflows/gradle-build.yml)
+[![Google Java Format](https://github.com/jvmusin/contents-prepender/actions/workflows/google-java-format.yml/badge.svg)](https://github.com/jvmusin/contents-prepender/actions/workflows/google-java-format.yml)
 
 ## Возможности
 
@@ -107,10 +107,10 @@ content
 
 Реализован в [ContentsPrepender].
 
-[ContentsExtractor]: src/main/java/jvmusin/customaggregations/ContentsExtractor.java
+[ContentsExtractor]: src/main/java/jvmusin/contentsprepender/ContentsExtractor.java
 
-[ContentsValidator]: src/main/java/jvmusin/customaggregations/ContentsValidator.java
+[ContentsValidator]: src/main/java/jvmusin/contentsprepender/ContentsValidator.java
 
-[ContentsRenderer]: src/main/java/jvmusin/customaggregations/ContentsRenderer.java
+[ContentsRenderer]: src/main/java/jvmusin/contentsprepender/ContentsRenderer.java
 
-[ContentsPrepender]: src/main/java/jvmusin/customaggregations/ContentsPrepender.java
+[ContentsPrepender]: src/main/java/jvmusin/contentsprepender/ContentsPrepender.java

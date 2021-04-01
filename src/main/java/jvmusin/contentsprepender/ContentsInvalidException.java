@@ -1,4 +1,4 @@
-package jvmusin.customaggregations;
+package jvmusin.contentsprepender;
 
 /** Thrown if {@link Contents} is invalid. */
 public class ContentsInvalidException extends RuntimeException {
