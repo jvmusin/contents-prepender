@@ -1,12 +1,12 @@
 package jvmusin.contentsprepender;
 
-import static java.util.Collections.emptyList;
-
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.Collections.emptyList;
 
 /**
  * Contents renderer.
@@ -21,8 +21,8 @@ public class ContentsRenderer {
     private final int indent;
 
     /**
-     * Renders a {@link Header} prepending it with {@code indent} * {@code depth} spaces and adding
-     * an {@code index} to the beginning.
+     * Renders a {@link Header} prepending it with {@code indent} * {@code depth} spaces and adding an {@code index} to
+     * the beginning.
      *
      * <p>The rendered header looks like
      *
@@ -31,8 +31,8 @@ public class ContentsRenderer {
      * </pre>
      *
      * @param header A {@link Header} to render.
-     * @param index Index of this header in the contents section.
-     * @param depth Depth of this header in the contents.
+     * @param index  Index of this header in the contents section.
+     * @param depth  Depth of this header in the contents.
      * @return A string representation of a rendered header.
      */
     private String render(Header header, int index, int depth) {
@@ -42,8 +42,8 @@ public class ContentsRenderer {
     }
 
     /**
-     * Renders a {@link ContentNode} prepending it with {@code indent} * {@code depth} spaces,
-     * adding an {@code index} to the beginning and its children recursively.
+     * Renders a {@link ContentNode} prepending it with {@code indent} * {@code depth} spaces, adding an {@code index}
+     * to the beginning and its children recursively.
      *
      * <p>The rendered ContentNode looks like
      *
@@ -53,11 +53,10 @@ public class ContentsRenderer {
      *     2. [Second section](#second-section)
      * </pre>
      *
-     * @param node A {@link ContentNode} to render.
+     * @param node  A {@link ContentNode} to render.
      * @param index Index of this ContentNode's root in the contents section.
      * @param depth Depth of this ContentNode.
-     * @return A list of string representations of this {@link ContentNode} and it's {@link
-     *     ContentNode#children}.
+     * @return A list of string representations of this {@link ContentNode} and it's {@link ContentNode#children}.
      */
     private List<String> render(ContentNode node, int index, int depth) {
         List<String> result = new ArrayList<>();
@@ -71,12 +70,10 @@ public class ContentsRenderer {
     }
 
     /**
-     * Builds a tree on all {@link Header}-s laying on the same level as the root at the moment of
-     * call.
+     * Builds a tree on all {@link Header}-s laying on the same level as the root at the moment of call.
      *
      * @param contents {@link Contents} to build a tree from.
-     * @return A list of {@link ContentNode}-s laying on the same level as the root at the moment of
-     *     call.
+     * @return A list of {@link ContentNode}-s laying on the same level as the root at the moment of call.
      */
     private List<ContentNode> buildTree(Contents contents) {
         class Builder {
@@ -114,8 +111,7 @@ public class ContentsRenderer {
     }
 
     /**
-     * Renders the given {@link Contents} prepending sub-sections with spaces equal to {@code depth}
-     * * {@code indent}.
+     * Renders the given {@link Contents} prepending sub-sections with spaces equal to {@code depth} * {@code indent}.
      *
      * @param contents {@link Contents} to render.
      * @return A list of string representations of the {@code contents}' headers.

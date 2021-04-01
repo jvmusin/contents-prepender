@@ -1,8 +1,8 @@
 package jvmusin.contentsprepender;
 
-import static java.text.MessageFormat.format;
-
 import org.jetbrains.annotations.NotNull;
+
+import static java.text.MessageFormat.format;
 
 /**
  * Contents validator.

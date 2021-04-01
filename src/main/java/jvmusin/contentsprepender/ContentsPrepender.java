@@ -1,11 +1,11 @@
 package jvmusin.contentsprepender;
 
-import static java.util.stream.Collectors.toList;
-
 import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * Contents prepender.
