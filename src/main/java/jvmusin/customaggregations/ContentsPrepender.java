@@ -1,34 +1,40 @@
 package jvmusin.customaggregations;
 
-import static java.util.stream.Collectors.toList;
-
 import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
+
 /**
  * Contents prepender.
  *
- * <p>Used to extract contents from the text and prepend the text with extracted contents.
+ * <p>Used to extract contents from the text
+ * and prepend the text with extracted contents.
  */
 @RequiredArgsConstructor
 public class ContentsPrepender {
 
-    /** Extractor used to extract {@link Contents}. */
+    /**
+     * Extractor used to extract {@link Contents}.
+     */
     private final ContentsExtractor extractor;
 
-    /** Renderer used to render {@link Contents}. */
+    /**
+     * Renderer used to render {@link Contents}.
+     */
     private final ContentsRenderer renderer;
 
-    /** Validator used to validate {@link Contents}. */
+    /**
+     * Validator used to validate {@link Contents}.
+     */
     private final ContentsValidator validator;
 
     /**
      * Returns {@code} prepended with its table of contents.
      *
      * <p>From this
-     *
      * <pre>
      * # My Project
      * ## Idea
@@ -41,7 +47,6 @@ public class ContentsPrepender {
      * </pre>
      *
      * <p>Makes this
-     *
      * <pre>
      * 1. [My Project](#my-project)
      *     1. [Idea](#idea)

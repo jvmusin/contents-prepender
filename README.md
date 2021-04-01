@@ -1,7 +1,7 @@
 # Кастомные агрегации на таблицах
 
 [![Gradle CI](https://github.com/jvmusin/custom-aggregations/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jvmusin/custom-aggregations/actions/workflows/gradle-build.yml)
-[![Google Java Format](https://github.com/jvmusin/custom-aggregations/actions/workflows/google-java-format.yml/badge.svg)](https://github.com/jvmusin/custom-aggregations/actions/workflows/google-java-format.yml)
+[![Google Java Format](https://github.com/jvmusin/custom-aggregations/actions/workflows/java-google-format.yml/badge.svg)](https://github.com/jvmusin/custom-aggregations/actions/workflows/google-java-format.yml)
 
 ## Возможности
 

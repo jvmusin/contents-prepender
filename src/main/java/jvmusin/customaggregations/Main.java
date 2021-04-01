@@ -10,8 +10,8 @@ public class Main {
     /**
      * Main method.
      *
-     * <p>Reads the file provided in a first cmd argument, prepends its content with its table of
-     * contents and prints it to `stdout`.
+     * <p>Reads the file provided in a first cmd argument,
+     * prepends its content with its table of contents and prints it to `stdout`.
      */
     @SneakyThrows
     public static void main(String[] args) {
@@ -24,8 +24,7 @@ public class Main {
             String text = Files.readString(file);
             System.out.println(prepender.prependWithContents(text));
         } catch (Exception e) {
-            System.err.println(
-                    "Unable to prepend the file with its content table: " + e.getMessage());
+            System.err.println("Unable to prepend the file with its content table: " + e.getMessage());
             e.printStackTrace();
         }
     }
