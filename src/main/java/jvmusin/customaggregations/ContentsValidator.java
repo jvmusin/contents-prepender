@@ -33,7 +33,7 @@ public class ContentsValidator {
         if (!contents.isEmpty() && contents.get(0).getLevel() != 1) {
             throw new ContentsInvalidException(
                     "First header of the document should have indentation level 1 (a single hash"
-                        + " symbol): "
+                            + " symbol): "
                             + contents.get(0));
         }
         for (int i = 1; i < contents.size(); i++) {
