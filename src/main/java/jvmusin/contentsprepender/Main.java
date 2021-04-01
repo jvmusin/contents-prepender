@@ -11,7 +11,7 @@ public class Main {
      * Main method.
      *
      * <p>Reads the file provided in a first cmd argument, prepends its content with its table of
-     * contents and prints it to `stdout`.
+     * contents and prints it to {@code stdout}.
      */
     @SneakyThrows
     public static void main(String[] args) {

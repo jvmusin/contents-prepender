@@ -20,10 +20,9 @@ public class ContentsValidator {
      * <p>Throws {@link ContentsInvalidException} if:
      *
      * <ul>
-     *   <li>the first header has indentation level other than `1`, or
-     *   <li>indentation level increases by more than `1` in some pair of two consecutive headers,
-     *       or
-     *   <li>indentation level of some header is less than `1`.
+     *   <li>the first header has indentation level other than {@code 1}, or
+     *   <li>indentation level increases by more than {@code 1} in some pair of two consecutive headers, or
+     *   <li>indentation level of some header is less than {@code 1}.
      * </ul>
      *
      * @param contents {@link Contents} to validate.

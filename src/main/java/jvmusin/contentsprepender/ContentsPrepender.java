@@ -25,7 +25,7 @@ public class ContentsPrepender {
     private final ContentsValidator validator;
 
     /**
-     * Returns {@code} prepended with its table of contents.
+     * Returns {@code text} prepended with its table of contents.
      *
      * <p>From this
      *

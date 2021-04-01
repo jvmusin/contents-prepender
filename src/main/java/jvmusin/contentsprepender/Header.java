@@ -2,6 +2,7 @@ package jvmusin.contentsprepender;
 
 import lombok.Data;
 
+/** Represents a single header in a document. */
 @Data
 public class Header {
 
