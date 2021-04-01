@@ -1,4 +1,4 @@
-package jvmusin.customaggregations;
+package jvmusin.contentsprepender;
 
 import static java.util.stream.Collectors.toList;
 

@@ -1,4 +1,4 @@
-package jvmusin.customaggregations;
+package jvmusin.contentsprepender;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -12,10 +12,6 @@ import java.util.Collection;
  * <p>Represented as a list of {@link Header}-s.
  */
 public class Contents extends ArrayList<Header> {
-    public Contents(int initialCapacity) {
-        super(initialCapacity);
-    }
-
     public Contents() {}
 
     public Contents(@NotNull Collection<? extends Header> c) {
