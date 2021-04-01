@@ -49,8 +49,8 @@ public class ContentsRenderer {
      *
      * <pre>
      * 1. [Root header](#root-header)
-     *     2. [First section](#first-section)
-     *     3. [Second section](#second-section)
+     *     1. [First section](#first-section)
+     *     2. [Second section](#second-section)
      * </pre>
      *
      * @param node A {@link ContentNode} to render.
