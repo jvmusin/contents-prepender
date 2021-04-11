@@ -2,6 +2,9 @@
 
 [![Gradle CI](https://github.com/jvmusin/contents-prepender/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/jvmusin/contents-prepender/actions/workflows/gradle-build.yml)
 
+Проект является решением тестового задания на стажировку в JetBrains 2021 на проект
+["Кастомные агрегации на таблицах"](https://internship.jetbrains.com/projects/939/).
+
 ## Возможности
 
 Проект умеет читать `Markdown` файлы, генерировать из них оглавление и добавлять отформатированное оглавление к файлу.
